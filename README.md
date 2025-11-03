@@ -27,7 +27,7 @@ Automate targeted mentions in channels and threads with schedule-based, rule-dri
    <strong>If you are looking for custom Discord Auto-Tagging Bot, you've just found your team — Let’s Chat.👆👆</strong>
 </p>
 
-##Introduction
+## Introduction
 This automation monitors channels, detects triggers (keywords, commands, schedules, webhooks), and auto-tags users/roles with configurable cadence and guardrails.  
 It removes the repetitive workflow of manually scanning chats and pinging people, which is error-prone and time-consuming.  
 Businesses and communities benefit from timely nudges, better SLA on support threads, and measurable engagement—without moderator burnout.
@@ -39,7 +39,7 @@ Businesses and communities benefit from timely nudges, better SLA on support thr
 - Full audit trail: logs, metrics, and exports for compliance and optimization.
 - Pluggable rules engine to adapt per channel, per role, or per campaign.
 
-##Core Features (must include 8–10)
+## Core Features 
 - **Real Devices and Emulators:** Run the tagging flows via real Android devices and emulator farms when API flows are insufficient (e.g., mobile-only features), ensuring parity with the Discord mobile app.
 - **No-ADB Wireless Automation:** Control devices over Wi-Fi without enabling ADB, using accessibility-driven gestures and on-screen selectors to trigger mentions and navigation safely.
 - **Mimicking Human Behavior:** Randomized delays, scrolling patterns, typing cadence, and reaction selection reduce bot fingerprints and align with human interaction norms.
@@ -67,19 +67,19 @@ Businesses and communities benefit from timely nudges, better SLA on support thr
   </a>
 </p>
 
-## How It Works (must)
+## How It Works
 1. **Input or Trigger —** From the Appilot dashboard, select channels, roles, and rules (keywords, schedules, webhooks) to initiate tagging flows on real Android devices or emulators when needed.  
 2. **Core Logic —** The system uses Discord API for standard ops; for app-only interactions, Appilot steers devices via UI Automator/Accessibility to navigate, search, and compose mentions.  
 3. **Output or Action —** The bot posts messages with targeted @role/@user mentions, reacts, or replies-in-thread; results are logged and surfaced in dashboards.  
 4. **Other functionalities—** Automatic retries, error tagging, structured logging, and parallel workers are configurable from the Appilot dashboard for resilience and scale.
 
-## Tech Stack (must)
+## Tech Stack
 **Language:** Kotlin, Java, JavaScript, Python  
 **Frameworks:** Appium, UI Automator, Espresso, Robot Framework, Cucumber  
 **Tools:** Appilot, Android Debug Bridge (ADB), Appium Inspector, Bluestacks, Nox Player, Scrcpy, Firebase Test Lab, MonkeyRunner, Accessibility  
 **Infrastructure:** Dockerized device farms, Cloud-based emulators, Proxy networks, Parallel Device Execution, Task Queues, Real device farm.
 
-##Directory Structure
+## Directory Structure
 ```
 discord-auto-tagging-bot/
 │
@@ -142,7 +142,7 @@ discord-auto-tagging-bot/
 ```
 
 
-##Use Cases (must)
+## Use Cases 
 - **Community managers** use it to auto-remind event roles before sessions, so they can increase attendance without @everyone.  
 - **Support teams** use it to tag on-call roles when tickets spike, so they can reduce response times.  
 - **Project leads** use it to nudge owners on stalled threads, so they can keep delivery on track.  
@@ -161,7 +161,7 @@ Absolutely. Use cron-like syntax in `rules/*.yaml` or the dashboard scheduler to
 **What happens if Discord rate limits the bot?**  
 The ratelimiter applies exponential backoff, pauses the offending rule, and retries within safe windows while preserving idempotency.
 
-##Performance & Reliability Benchmarks (must)
+## Performance & Reliability Benchmarks
 - **Execution Speed:** Typical tagging cycle completes in 0.8–2.5s per mention (API) and 3–6s (mobile), batch-optimized with pipelined workers.  
 - **Success Rate:** 95% end-to-end success across stable network conditions and validated selectors.  
 - **Scalability:** Horizontally scales to 300–1000 Android devices/emulators with a shared queue and sharded rulesets.  
